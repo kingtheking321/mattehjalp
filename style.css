@@ -1,215 +1,255 @@
-/* ==== Optimized & Clean CSS for Mattehjälp.se ==== */
+/* ==== Mattehjälp.se – Avancerad och optimerad CSS ==== */
 
-/* Reset & base */
-* {
+/* RESET + BASE */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
 }
-
-html, body {
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9fbff;
+  background-color: #f9fbff;
   color: #1a1a1a;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Motion safety */
-@media (prefers-reduced-motion: no-preference) {
-  body {
-    animation: fadeIn 1.2s ease forwards;
-  }
-  header {
-    animation: slideDownFade 1s ease forwards;
-  }
+/* CONTAINER - max-width och paddings */
+.container {
+  max-width: 860px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideDownFade {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Header */
+/* HEADER */
 header {
   background: linear-gradient(135deg, #81d4fa, #4fc3f7);
-  color: #003c58;
-  padding: 3rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
-  flex-shrink: 0;
-}
-
-header h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  letter-spacing: 1px;
-}
-
-header p {
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-/* Navigation */
-nav {
-  background: #e3f2fd;
-  box-shadow: inset 0 -1px 0 #bbdefb;
-  padding: 1rem 0;
+  padding: 3rem 0 2.5rem;
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.15);
   text-align: center;
   flex-shrink: 0;
+  user-select: none;
 }
-
-nav ul {
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-nav li:hover {
-  transform: scale(1.15);
-}
-
-nav a {
-  text-decoration: none;
-  color: #0277bd;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #01579b;
-}
-
-nav a:focus-visible {
-  outline: 2px dashed #0277bd;
-  outline-offset: 3px;
-}
-
-/* Main Content */
-main {
-  max-width: 800px;
-  margin: 2.5rem auto 3rem;
-  padding: 0 1rem;
-  flex-grow: 1;
-}
-
-section {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(100, 150, 220, 0.1);
-  padding: 2rem;
-  margin-bottom: 2.5rem;
-  transition: box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-section:hover {
-  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.25);
-}
-
-section h2 {
-  color: #0277bd;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
-
-a {
-  color: #0288d1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  color: #01579b;
-  text-decoration: underline;
-}
-
-a:focus-visible {
-  outline: 2px dashed #0288d1;
-  outline-offset: 3px;
-}
-
-/* Footer */
-footer {
-  background: #f1f5fb;
-  color: #666;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1.2rem 1rem;
-  box-shadow: inset 0 1px 0 #bbdefb;
-  flex-shrink: 0;
-}
-
-/* Logo */
 .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  user-select: none;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 1rem;
 }
-
 .logo-icon {
-  font-size: 3.2rem;
-  color: #0277bd;
+  font-size: 3rem;
   font-weight: 900;
+  color: #0277bd;
 }
-
 .logo-text {
-  font-size: 2.6rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #01579b;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+.lead {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 
-/* Responsive Design */
+/* NAVIGATION */
+.nav-main {
+  background-color: #e3f2fd;
+  border-top: 1px solid #bbdefb;
+  border-bottom: 1px solid #bbdefb;
+  flex-shrink: 0;
+}
+.nav-main .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li {
+  margin: 0;
+}
+.nav-list a {
+  color: #0277bd;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: #01579b;
+  outline: 2px dashed #0277bd;
+  outline-offset: 3px;
+}
+
+/* NAV TOGGLE BUTTON - för mobilmeny */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #0277bd;
+  user-select: none;
+}
+.nav-toggle:focus-visible {
+  outline: 2px dashed #0277bd;
+  outline-offset: 3px;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.content-section {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(33, 150, 243, 0.1);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.25s ease;
+  will-change: box-shadow;
+  text-align: center;
+}
+.content-section:hover,
+.content-section:focus-within {
+  box-shadow: 0 8px 32px rgba(33, 150, 243, 0.2);
+}
+.content-section h2 {
+  font-size: 2rem;
+  color: #0277bd;
+  margin-bottom: 1.25rem;
+}
+.content-section p,
+.content-section ul {
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+.content-section ul {
+  list-style-type: disc;
+  padding-left: 1.8rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+.content-section li {
+  margin-bottom: 0.6rem;
+}
+
+/* Länkar generellt */
+a {
+  color: #0277bd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover,
+a:focus-visible {
+  color: #01579b;
+  text-decoration: underline;
+  outline: 2px dashed #0277bd;
+  outline-offset: 3px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #f1f5fb;
+  color: #666;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #cfd8dc;
+  flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+
+/* Mobil */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
+  html {
+    font-size: 14px;
   }
-  nav li {
-    display: block;
-    margin: 0.6rem 0;
-  }
-  main {
-    margin: 1.5rem auto 2rem;
+  header {
+    padding: 2rem 1rem 1.8rem;
   }
   .logo {
     flex-direction: column;
-    gap: 0.2rem;
   }
   .logo-icon {
     font-size: 2.4rem;
   }
   .logo-text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .nav-main .container {
+    padding: 0.6rem 0;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /* Visa hamburgermeny */
+  .nav-toggle {
+    display: block;
+  }
+  .nav-list[hidden] {
+    display: none !important;
+  }
+  main {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .content-section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Motion (prefers-reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+  body.js header {
+    animation: fadeIn 1.2s ease forwards;
+  }
+  body.js header,
+  body.js .content-section:hover,
+  body.js .content-section:focus-within {
+    will-change: transform, opacity;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-12px);}
+    to { opacity: 1; transform: translateY(0);}
   }
 }
