@@ -2,133 +2,85 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Mattehjälp för högstadieelever i Kristinehamn och online. Högkvalitativ privatundervisning med flexibel bokning." />
-  <meta name="author" content="Ahmed Tarech" />
-  <meta name="keywords" content="mattehjälp, matematik, kristinehamn, privatundervisning, högstadie, gymnasie, online, sommar" />
-  <meta name="theme-color" content="#0277bd" />
-
-  <title>Mattehjälp – Privatundervisning i Matematik</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- Styles -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet';" />
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mattehjälp.nu – Privatlärare i Matematik</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="script.js"></script>
 </head>
-
 <body>
+
   <header>
-    <div class="logo" aria-label="Mattehjälp logotyp">
-      <span class="logo-icon" aria-hidden="true">∑</span>
-      <span class="logo-text">MATTEHJÄLP</span>
+    <div class="logo">
+      <span class="logo-icon">∑</span>
+      <span class="logo-text">Mattehjälp.nu</span>
     </div>
-    <h1>Personlig mattehjälp för högstadieelever</h1>
-    <p>Professionell undervisning i Kristinehamn eller online – hela sommaren 2025</p>
+    <p>Din expert på matematikundervisning – online och fysiskt</p>
+    <button id="toggleDark" title="Byt färgtema">🌓</button>
   </header>
 
-  <nav aria-label="Huvudmeny">
+  <nav>
     <ul>
+      <li><a href="#om">Om</a></li>
       <li><a href="#tjanster">Tjänster</a></li>
-      <li><a href="#om">Om mig</a></li>
       <li><a href="#priser">Priser</a></li>
-      <li><a href="#recensioner">Recensioner</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- Tjänster -->
-    <section id="tjanster">
+    <section id="om" data-aos="fade-up">
+      <h2>Om Oss</h2>
+      <p>Vi erbjuder anpassad matematikundervisning för alla nivåer – från grundskola till högskola. Vårt mål är att varje elev ska utvecklas i sin takt med tydlig vägledning.</p>
+    </section>
+
+    <section id="tjanster" data-aos="fade-up">
       <h2>Tjänster</h2>
-      <p>Jag erbjuder mattehjälp i flera olika former:</p>
       <ul>
-        <li>🧮 <strong>Onlineundervisning</strong> via Zoom eller Google Meet</li>
-        <li>📍 <strong>Fysiska möten</strong> i Kristinehamnsområdet</li>
-        <li>📘 <strong>Läxhjälp</strong> och repetition inför prov</li>
-        <li>🚀 <strong>Förberedelse</strong> inför gymnasiet</li>
-        <li>🧠 <strong>Studieteknik</strong> och motivation</li>
+        <li>Onlinelektioner via Zoom</li>
+        <li>Privatlektioner i Stockholm</li>
+        <li>Studiehjälp & repetitionskurser</li>
+        <li>Förberedelser inför nationella prov</li>
       </ul>
     </section>
 
-    <!-- Om Mig -->
-    <section id="om">
-      <h2>Om Mig</h2>
-      <p>
-        Jag heter Ahmed och är en gymnasieelev med starkt intresse för matematik, problemlösning
-        och undervisning. Som diplomerad sommarlovsentreprenör erbjuder jag personlig mattehjälp
-        anpassad efter elevens behov.
-      </p>
-      <ul>
-        <li>🎓 Merit: Goda betyg i matte och NO-ämnen</li>
-        <li>🗣️ God pedagogisk förmåga</li>
-        <li>⏰ Flexibel med tider</li>
-        <li>🤝 Trygg och tillgänglig handledare</li>
-      </ul>
-    </section>
-
-    <!-- Priser -->
-    <section id="priser">
+    <section id="priser" data-aos="fade-up">
       <h2>Priser</h2>
       <table>
         <thead>
-          <tr>
-            <th>Tjänst</th>
-            <th>Pris</th>
-          </tr>
+          <tr><th>Tjänst</th><th>Pris</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Onlinelektion (60 min)</td>
-            <td>150 kr</td>
-          </tr>
-          <tr>
-            <td>Fysisk träff (60 min)</td>
-            <td>200 kr</td>
-          </tr>
-          <tr>
-            <td>Paket: 5 onlinelektioner</td>
-            <td>650 kr</td>
-          </tr>
+          <tr><td>Onlinelektion (60 min)</td><td>399 kr</td></tr>
+          <tr><td>Fysisk lektion (60 min)</td><td>499 kr</td></tr>
+          <tr><td>10-lektionerspaket</td><td>3 799 kr</td></tr>
         </tbody>
       </table>
     </section>
 
-    <!-- Recensioner -->
-    <section id="recensioner">
-      <h2>Recensioner</h2>
-      <blockquote>
-        <p>"Ahmed hjälpte min son att höja sitt mattebetyg från E till C på bara några veckor!"</p>
-        <footer>– Förälder, Kristinehamn</footer>
-      </blockquote>
-      <blockquote>
-        <p>"Lugn, tydlig och väldigt pedagogisk. Rekommenderas varmt."</p>
-        <footer>– Elev, Årskurs 9</footer>
-      </blockquote>
+    <section id="kontakt" data-aos="fade-up">
+      <h2>Kontakta oss</h2>
+      <form action="https://formspree.io/f/xqkrbnkq" method="POST">
+        <label for="namn">Namn:</label>
+        <input type="text" id="namn" name="namn" required>
+
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" name="epost" required>
+
+        <label for="meddelande">Meddelande:</label>
+        <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+
+        <button type="submit">Skicka meddelande</button>
+      </form>
     </section>
 
-    <!-- Kontakt -->
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Vill du boka en tid eller har du frågor? Kontakta mig här:</p>
-      <ul>
-        <li>📧 <a href="mailto:ahmedtarech08@gmail.com">ahmedtarech08@gmail.com</a></li>
-        <li>📞 <a href="tel:+46762948859">076-294 88 59</a></li>
-        <li>📍 Kristinehamn, Värmland</li>
-      </ul>
-    </section>
+    <a href="#kontakt" class="floating-button">📅 Boka nu</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mattehjälp – By Ahmed Tarech</p>
-    <p><a href="#top">Till toppen ↑</a></p>
+    <p>&copy; 2025 Mattehjälp.nu – All rights reserved.</p>
   </footer>
 
-  <!-- Lazy loading script fallback -->
-  <script>
-    // Om du vill lägga till scroll animationer, kontaktformulär m.m. i framtiden.
-  </script>
 </body>
 </html>
-
