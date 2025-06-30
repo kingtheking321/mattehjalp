@@ -4,17 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="7xPOMQVb04zcPS3mBujZWjcg9xC4kJUehsUqmWZzYik" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cstyle%3E.sigma%7Bfont-size%3A80px%3Bfill%3A%230277bd%3Bfont-weight%3Abold%3Bfont-family%3A'Segoe%20UI'%2C%20Tahoma%2C%20Geneva%2C%20Verdana%2C%20sans-serif%3B%7D.text%7Bfont-size%3A36px%3Bfill%3A%2301579b%3Bfont-weight%3A700%3Bfont-family%3A'Segoe%20UI'%2C%20Tahoma%2C%20Geneva%2C%20Verdana%2C%20sans-serif%3Bletter-spacing%3A2px%3B%7D%3C%2Fstyle%3E%3Ctext x='10' y='70' class='sigma'%3E%E2%88%91%3C%2Ftext%3E%3Ctext x='100' y='75' class='text'%3EMattehj%C3%A4lp%3C%2Ftext%3E%3C%2Fsvg%3E" />
+
+  <!-- Preconnect för snabbare font-/resursladdning (även om ni inte har externa typsnitt nu) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Kompakt favicon inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cstyle%3E.sigma%7Bfont-size%3A80px%3Bfill%3A%230277bd%3Bfont-weight%3Abold%3Bfont-family%3A'Segoe%20UI',%20Tahoma,%20Geneva,%20Verdana,%20sans-serif%3B%7D.text%7Bfont-size%3A36px%3Bfill%3A%2301579b%3Bfont-weight%3A700%3Bfont-family%3A'Segoe%20UI',%20Tahoma,%20Geneva,%20Verdana,%20sans-serif%3Bletter-spacing%3A2px%3B%7D%3C/style%3E%3Ctext x='10' y='70' class='sigma'%3E%E2%88%91%3C/text%3E%3Ctext x='100' y='75' class='text'%3EMattehj%C3%A4lp%3C/text%3E%3C/svg%3E" />
 
   <title>Mattehjälp fysiskt och digitalt</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Kritiskt CSS inline -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fbff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      margin: 0;
+      padding: 1rem;
+    }
+    header, nav, main, footer {
+      max-width: 800px;
+      margin: auto;
+    }
+    header h1 {
+      color: #0277bd;
+      margin-bottom: .4rem;
+    }
+    nav ul { list-style: none; text-align: center; padding: 0; }
+    nav li { display: inline-block; margin: 0 .6rem; }
+    nav a { text-decoration: none; color: #0277bd; font-weight: 600; }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .logo-icon {
+      font-size: 2.2rem;
+      color: #0277bd;
+      margin-right: 0.5rem;
+    }
+    .logo-text {
+      font-size: 1.4rem;
+      color: #01579b;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <!-- Ladda icke-kritisk CSS asynkront -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
+
 <body>
   <header>
     <div class="logo">
-  <span class="logo-icon">∑</span>
-  <span class="logo-text">MATTEHJALP</span>
-</div>
+      <span class="logo-icon">∑</span>
+      <span class="logo-text">MATTEHJÄLP</span>
+    </div>
     <h1>Mattehjälp för Högstadieelever – Sommaren 2025</h1>
     <p>Få hjälp med svåra mattekurser – både online och fysiskt i Kristinehamn.</p>
   </header>
@@ -44,7 +92,7 @@
       <p>
         Jag är en sommarentreprenör och gymnasiestudent med passion för matematik och pedagogik.
         Under sommaren erbjuder jag målmedveten, personlig mattehjälp till dig som läser på högstadienivå
-        och vill ta dina kunskaper till nästa nivå – .
+        och vill ta dina kunskaper till nästa nivå.
       </p>
     </section>
 
@@ -52,8 +100,8 @@
       <h2>Kontakt</h2>
       <p>Välkommen att höra av dig för frågor eller för att boka ett första samtal (gratis konsultation):</p>
       <ul>
-        <li>E-post: <a href="ahmedtarech08@gmail.com">ahmedtarech08@gmail.com</a></li>
-        <li>Telefon: 076-294 88 59</li>
+        <li>E-post: <a href="mailto:ahmedtarech08@gmail.com">ahmedtarech08@gmail.com</a></li>
+        <li>Telefon: <a href="tel:+46762948859">076-294 88 59</a></li>
         <li>Ort: Kristinehamn (för fysiska möten)</li>
       </ul>
     </section>
@@ -62,7 +110,5 @@
   <footer>
     <p>&copy; 2025 Mattehjälp Sommaren 2025 – Alla rättigheter förbehållna</p>
   </footer>
-
 </body>
 </html>
-
