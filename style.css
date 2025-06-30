@@ -169,4 +169,32 @@
       padding: 0 1rem;
     }
   }
+.header-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #81d4fa 0%, #4fc3f7 100%);
+  padding: 2rem 1rem;
+  color: #003c58;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+}
+
+.logo-image {
+  height: 60px; /* Justera storlek på loggan */
+  user-select: none;
+}
+
+.header-text h1 {
+  margin: 0 0 0.3rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
   
