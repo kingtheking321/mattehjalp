@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="sv">
+<!DOCTYPE html>
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mattehjälp.nu – Privatlärare i Matematik</title>
   <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Fördröjd CSS-laddning -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+
+  <!-- JavaScript med defer (fördröjer tills HTML laddats) -->
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script defer src="script.js"></script>
 </head>
+
 <body>
 
   <header>
