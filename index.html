@@ -3,98 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mattehjälp.nu – Privatlärare i Matematik</title>
-
-  <!-- Faviconer -->
+  <title>Mattehjälp.nu - Din Matematikpartner</title>
+  <meta name="description" content="Mattehjälp.nu erbjuder personlig hjälp och resurser för att förbättra dina mattekunskaper." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0277bd" />
-  <meta name="msapplication-TileColor" content="#0277bd" />
-  <meta name="theme-color" content="#0277bd" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <span class="logo-icon">∑</span>
-      <span class="logo-text">Mattehjälp.nu</span>
+
+  <header role="banner" aria-label="Mattehjälp.nu Logotyp och navigering">
+    <div class="logo-container">
+      <svg viewBox="0 0 250 250" role="img" aria-labelledby="logoTitle logoDesc" id="logoSvg" tabindex="0" focusable="true" >
+        <title id="logoTitle">Mattehjälp.nu Logotyp</title>
+        <desc id="logoDesc">En stiliserad vågande grafkurva i blåa toner med texten Mattehjälp.nu under</desc>
+
+        <defs>
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0277bd"/>
+            <stop offset="100%" stop-color="#80d8ff"/>
+          </linearGradient>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%" >
+            <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#80d8ff" flood-opacity="0.7"/>
+          </filter>
+        </defs>
+
+        <path id="wavePath" fill="none" stroke="url(#textGradient)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+
+        <text x="125" y="220" font-family="Poppins, sans-serif" font-weight="700" font-size="32" text-anchor="middle" fill="url(#textGradient)" letter-spacing="0.05em" style="filter: url(#glow);">
+          Mattehjälp.nu
+        </text>
+      </svg>
     </div>
-    <p>Din expert på matematikundervisning – online och fysiskt</p>
-    <button id="toggleDark" title="Byt färgtema" aria-label="Byt mellan ljust och mörkt tema">🌙</button>
   </header>
 
-  <nav>
+  <nav role="navigation" aria-label="Huvudmeny">
     <ul>
-      <li><a href="#om">Om</a></li>
       <li><a href="#tjanster">Tjänster</a></li>
-      <li><a href="#priser">Priser</a></li>
+      <li><a href="#om-oss">Om oss</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section id="om" data-aos="fade-up">
-      <h2>Om Oss</h2>
-      <p>Vi erbjuder anpassad matematikundervisning för alla nivåer – fokus för grundskola. Vårt mål är att varje elev ska utvecklas i sin takt med tydlig vägledning.</p>
-    </section>
-
-    <section id="tjanster" data-aos="fade-up">
+  <main role="main">
+    <section id="tjanster" tabindex="-1">
       <h2>Tjänster</h2>
-      <ul>
-        <li>Onlinelektioner via Zoom</li>
-        <li>Privatlektioner i Kristinehamn</li>
-        <li>Studiehjälp & repetitionskurser</li>
-        <li>Förberedelser inför nationella prov</li>
-      </ul>
+      <p>Vi erbjuder personlig handledning, online-kurser och interaktiva övningar för att förbättra dina mattekunskaper.</p>
     </section>
 
-    <section id="priser" data-aos="fade-up">
-      <h2>Priser</h2>
-      <table>
-        <thead>
-          <tr><th>Tjänst</th><th>Pris</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Onlinelektion (60 min)</td><td>85 kr</td></tr>
-          <tr><td>Fysisk lektion (60 min)</td><td>105 kr</td></tr>
-          <tr><td>10-lektionerspaket</td><td>750 kr</td></tr>
-        </tbody>
-      </table>
+    <section id="om-oss" tabindex="-1">
+      <h2>Om oss</h2>
+      <p>Mattehjälp.nu består av engagerade matematiklärare med många års erfarenhet av att hjälpa elever nå sina mål.</p>
     </section>
 
-    <section id="kontakt" data-aos="fade-up">
-      <h2>Kontakta oss</h2>
-      <form action="https://formspree.io/f/mnnvrnqa" method="POST">
-        <label>
-          Din email:
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Ditt meddelande:
-          <textarea name="message" required></textarea>
-        </label>
+    <section id="kontakt" tabindex="-1">
+      <h2>Kontakt</h2>
+      <form aria-label="Kontaktformulär">
+        <label for="namn">Namn</label>
+        <input id="namn" name="namn" type="text" required />
+
+        <label for="email">E-post</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="meddelande">Meddelande</label>
+        <textarea id="meddelande" name="meddelande" rows="4" required></textarea>
+
         <button type="submit">Skicka</button>
       </form>
     </section>
-
-    <a href="#kontakt" class="floating-button">Boka nu</a>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Mattehjälp.nu – All rights reserved.</p>
+  <footer role="contentinfo">
+    <p>© 2025 Mattehjälp.nu — Alla rättigheter reserverade</p>
   </footer>
 
-  <!-- AOS animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-
-  <!-- Din egna JavaScript -->
   <script src="script.js" defer></script>
 </body>
 </html>
