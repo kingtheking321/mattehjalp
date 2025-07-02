@@ -1,99 +1,34 @@
 <!DOCTYPE html>
 <html lang="sv">
-<!DOCTYPE html>
-<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Privatlärare i matematik – få personlig hjälp online eller i Kristinehamn. Effektiv, prisvärd undervisning för grundskola och gymnasieelever." />
   <title>Mattehjälp.nu – Privatlärare i Matematik</title>
+
+  <!-- Performance: Preload CSS -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- 🔽 Kritisk CSS inline för snabb rendering -->
-  <style>
-    :root {
-      --bg: #f4f9ff;
-      --text: #1a1a1a;
-      --primary: #0277bd;
-      --accent: #4fc3f7;
-      --link: #0288d1;
-      --white: #fff;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-    }
-
-    .logo-icon {
-      font-size: 3rem;
-    }
-
-    .logo-text {
-      font-size: 2.2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      background: #e3f2fd;
-      padding: 1rem 0;
-      text-align: center;
-    }
-
-    nav li {
-      display: inline-block;
-      margin: 0 1rem;
-    }
-
-    nav a {
-      color: var(--primary);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-  </style>
-
-  <!-- 🔽 Fulla stilmallen laddas asynkront -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-
-  <!-- AOS & script -->
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script defer src="script.js"></script>
 
-  <!-- Fallback för äldre webbläsare -->
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <!-- Custom Script -->
+  <script defer src="script.js"></script>
 </head>
 <body>
-
   <header>
     <div class="logo">
-      <span class="logo-icon">∑</span>
+      <span class="logo-icon" aria-hidden="true">∑</span>
       <span class="logo-text">Mattehjälp.nu</span>
     </div>
     <p>Din expert på matematikundervisning – online och fysiskt</p>
-    <button id="toggleDark" title="Byt färgtema"></button>
+    <button id="toggleDark" title="Byt färgtema" aria-label="Växla färgtema"></button>
   </header>
 
   <nav>
@@ -125,7 +60,7 @@
       <h2>Priser</h2>
       <table>
         <thead>
-          <tr><th>Tjänst</th><th>Pris</th></tr>
+          <tr><th scope="col">Tjänst</th><th scope="col">Pris</th></tr>
         </thead>
         <tbody>
           <tr><td>Onlinelektion (60 min)</td><td>85 kr</td></tr>
@@ -137,46 +72,43 @@
 
     <section id="kontakt" data-aos="fade-up">
       <h2>Kontakta oss</h2>
-      <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/mnnvrnqa"
-  method="POST"
->
-  <label>
-    Din email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Din meddelande:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Skicka</button>
-</form>
+      <form action="https://formspree.io/f/mnnvrnqa" method="POST">
+        <label for="email">Din email:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="message">Ditt meddelande:</label>
+        <textarea id="message" name="message" required aria-required="true"></textarea>
+
+        <button type="submit">Skicka</button>
+      </form>
     </section>
 
-    <a href="#kontakt" class="floating-button">Boka nu</a>
+    <a href="#kontakt" class="floating-button" aria-label="Boka nu">Boka nu</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Mattehjälp.nu – All rights reserved.</p>
   </footer>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "url": "https://www.mattehjalp.nu/contact",
-  "mainEntity": {
-    "@type": "Service",
-    "name": "Math Help Services",
-    "serviceType": ["Digital Math Help", "Physical Math Tutoring"],
-    "description": "Request math help online or in person. Discuss prices and schedule meetings.",
+
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mattehjälp.nu",
+    "description": "Privatlektioner i matematik – online och fysiskt.",
+    "url": "https://www.mattehjalp.nu",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Kristinehamn"
+    },
+    "serviceType": ["Onlinelektioner", "Fysisk matematikundervisning"],
     "provider": {
       "@type": "Person",
       "name": "Ahmed"
     }
   }
-}
-</script>
+  </script>
 </body>
 </html>
+
