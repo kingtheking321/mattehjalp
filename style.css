@@ -1,136 +1,86 @@
-:root {
-  --bg: #f4f9ff;
-  --text: #1a1a1a;
-  --primary: #0277bd;
-  --accent: #4fc3f7;
-  --link: #0288d1;
-  --white: #fff;
-}
-
-body.dark {
-  --bg: #121212;
-  --text: #e0e0e0;
-  --primary: #80d8ff;
-  --accent: #01579b;
-  --link: #4fc3f7;
-  --white: #1e1e1e;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+  background: #f4f9ff;
+  color: #1a1a1a;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 header {
-  background: linear-gradient(135deg, var(--accent), var(--primary));
-  color: var(--white);
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #4fc3f7, #0277bd);
+  padding: 2rem 1rem;
   text-align: center;
-  position: relative;
+  color: white;
+  user-select: none;
 }
 
-#toggleDark {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--white);
-  transition: color 0.3s ease;
+.logo-container {
+  max-width: 320px;
+  margin: 0 auto;
 }
 
-#toggleDark:hover {
-  color: var(--accent);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.logo-icon {
-  font-size: 3rem;
-}
-
-.logo-text {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+svg#logoSvg {
+  width: 100%;
+  height: auto;
+  outline: none;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
 }
 
 nav {
   background: #e3f2fd;
   padding: 1rem 0;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 1rem;
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 2rem;
+  justify-content: center;
 }
 
 nav a {
-  color: var(--primary);
-  font-weight: bold;
+  color: #0277bd;
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: var(--accent);
+nav a:hover,
+nav a:focus-visible {
+  color: #4fc3f7;
+  outline: none;
 }
 
 main {
+  flex: 1;
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
-  flex: 1;
 }
 
 section {
-  background: var(--white);
-  border-radius: 10px;
+  background: white;
   padding: 2rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h2 {
-  color: var(--primary);
-  margin-top: 0;
-}
-
-ul {
-  margin-left: 1.5rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 0.8rem;
-  text-align: left;
-}
-
-th {
-  background: #e3f2fd;
-  color: var(--primary);
+  color: #0277bd;
+  margin-bottom: 1rem;
 }
 
 form {
@@ -139,74 +89,53 @@ form {
   gap: 1rem;
 }
 
+label {
+  font-weight: 600;
+}
+
 input, textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  resize: vertical;
-  background: var(--white);
-  color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 5px var(--accent);
+  border-color: #0277bd;
+  box-shadow: 0 0 6px #80d8ff;
 }
 
 button {
-  background: var(--primary);
-  color: var(--white);
+  background: #0277bd;
+  color: white;
   border: none;
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
+  font-weight: 700;
   cursor: pointer;
-  font-weight: bold;
   transition: background 0.3s ease;
 }
 
-button:hover {
-  background: var(--accent);
+button:hover,
+button:focus-visible {
+  background: #4fc3f7;
+  outline: none;
 }
 
 footer {
+  background: #e3f2fd;
   text-align: center;
   padding: 1rem;
-  background: #e3f2fd;
   font-size: 0.9rem;
   border-top: 1px solid #bbdefb;
-  color: var(--primary);
-}
-
-/* Flytande "Boka nu" knapp */
-.floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--primary);
-  color: var(--white);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-  z-index: 999;
-}
-
-.floating-button:hover {
-  transform: scale(1.05);
 }
 
 /* Responsivitet */
 @media (max-width: 600px) {
-  .logo {
+  nav ul {
     flex-direction: column;
-  }
-  nav li {
-    display: block;
-    margin: 0.5rem 0;
+    gap: 1rem;
   }
 }
