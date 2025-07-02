@@ -8,18 +8,83 @@
   <title>Mattehjälp.nu – Privatlärare i Matematik</title>
   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- Fördröjd CSS-laddning -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <!-- 🔽 Kritisk CSS inline för snabb rendering -->
+  <style>
+    :root {
+      --bg: #f4f9ff;
+      --text: #1a1a1a;
+      --primary: #0277bd;
+      --accent: #4fc3f7;
+      --link: #0288d1;
+      --white: #fff;
+    }
 
-  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
 
-  <!-- JavaScript med defer (fördröjer tills HTML laddats) -->
+    header {
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .logo-icon {
+      font-size: 3rem;
+    }
+
+    .logo-text {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: #e3f2fd;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+  </style>
+
+  <!-- 🔽 Fulla stilmallen laddas asynkront -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+
+  <!-- AOS & script -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script defer src="script.js"></script>
-</head>
 
+  <!-- Fallback för äldre webbläsare -->
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+</head>
 <body>
 
   <header>
