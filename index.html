@@ -4,25 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mattehjälp.nu – Privatlärare i Matematik</title>
-
-  <!-- Favicon och app ikoner -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0277bd" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <meta name="msapplication-TileColor" content="#0277bd" />
-  <meta name="msapplication-config" content="/browserconfig.xml" />
-  <meta name="theme-color" content="#0277bd" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- JS med defer -->
-  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script defer src="script.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -32,7 +15,7 @@
       <span class="logo-text">Mattehjälp.nu</span>
     </div>
     <p>Din expert på matematikundervisning – online och fysiskt</p>
-    <button id="toggleDark" title="Byt färgtema">🌙</button>
+    <button id="toggleDark" title="Byt färgtema" aria-label="Byt färgtema">🌙</button>
   </header>
 
   <nav>
@@ -45,12 +28,12 @@
   </nav>
 
   <main>
-    <section id="om" data-aos="fade-up">
+    <section id="om">
       <h2>Om Oss</h2>
       <p>Vi erbjuder anpassad matematikundervisning för alla nivåer – fokus för grundskola. Vårt mål är att varje elev ska utvecklas i sin takt med tydlig vägledning.</p>
     </section>
 
-    <section id="tjanster" data-aos="fade-up">
+    <section id="tjanster">
       <h2>Tjänster</h2>
       <ul>
         <li>Onlinelektioner via Zoom</li>
@@ -60,7 +43,7 @@
       </ul>
     </section>
 
-    <section id="priser" data-aos="fade-up">
+    <section id="priser">
       <h2>Priser</h2>
       <table>
         <thead>
@@ -74,46 +57,29 @@
       </table>
     </section>
 
-    <section id="kontakt" data-aos="fade-up">
+    <section id="kontakt">
       <h2>Kontakta oss</h2>
       <form action="https://formspree.io/f/mnnvrnqa" method="POST">
         <label>
           Din email:
-          <input type="email" name="email" required />
+          <input type="email" name="email" required>
         </label>
         <label>
           Ditt meddelande:
-          <textarea name="message" required></textarea>
+          <textarea name="message" rows="5" required></textarea>
         </label>
         <button type="submit">Skicka</button>
       </form>
     </section>
 
-    <a href="#kontakt" class="floating-button">Boka nu</a>
+    <a href="#kontakt" class="floating-button" aria-label="Boka nu">Boka nu</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Mattehjälp.nu – All rights reserved.</p>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "url": "https://www.mattehjalp.nu/contact",
-    "mainEntity": {
-      "@type": "Service",
-      "name": "Math Help Services",
-      "serviceType": ["Digital Math Help", "Physical Math Tutoring"],
-      "description": "Request math help online or in person. Discuss prices and schedule meetings.",
-      "provider": {
-        "@type": "Person",
-        "name": "Ahmed"
-      }
-    }
-  }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
 
