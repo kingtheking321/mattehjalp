@@ -3,86 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mattehjälp.nu – Privatlärare i Matematik</title>
-  <link rel="icon" href="favicon.ico" />
+  <title>Mattehjälp</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <meta name="description" content="Anpassad matematikundervisning för grundskola med online- och privatlektioner i Kristinehamn." />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-
-  <nav class="sidebar" aria-label="Huvudmeny">
-    <ul>
-      <li><a href="#om">Om</a></li>
-      <li><a href="#tjanster">Tjänster</a></li>
-      <li><a href="#priser">Priser</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-
   <header>
-    <div class="logo" aria-label="Logotyp Mattehjälp">
-      <span class="logo-icon" aria-hidden="true">∑</span>
-      <span class="logo-text">Mattehjälp.nu</span>
-    </div>
-    <p>Din expert på matematikundervisning – online och fysiskt</p>
-    <button id="toggleDark" title="Byt färgtema" aria-pressed="false" aria-label="Byt till mörkt tema">🌙</button>
+    <button id="toggleDark" aria-label="Växla mörkt läge">🌙</button>
   </header>
 
   <main>
-    <section id="om" tabindex="-1" data-aos="fade-up">
-      <h2>Om Oss</h2>
-      <p>Vi erbjuder anpassad matematikundervisning för alla nivåer – fokus för grundskola. Vårt mål är att varje elev ska utvecklas i sin takt med tydlig vägledning.</p>
+    <section id="book-section" aria-label="Bläddrande mattebok">
+      <div class="book-animation" aria-hidden="true"></div>
+      <h1>Mattehjälp</h1>
+      <div class="animated-line"></div>
     </section>
 
-    <section id="tjanster" tabindex="-1" data-aos="fade-up">
+    <section id="about" class="section hidden">
+      <h2>Om oss</h2>
+      <p>Vi erbjuder professionell mattehjälp med erfarna lärare och anpassade metoder för alla nivåer.</p>
+    </section>
+
+    <section id="services" class="section hidden">
       <h2>Tjänster</h2>
       <ul>
-        <li>Onlinelektioner via Zoom</li>
-        <li>Privatlektioner i Kristinehamn</li>
-        <li>Studiehjälp & repetitionskurser</li>
-        <li>Förberedelser inför nationella prov</li>
+        <li>Privatlektioner online och på plats</li>
+        <li>Grupplektioner</li>
+        <li>Onlinekurser och material</li>
       </ul>
     </section>
 
-    <section id="priser" tabindex="-1" data-aos="fade-up">
+    <section id="pricing" class="section hidden">
       <h2>Priser</h2>
       <table>
         <thead>
-          <tr><th>Tjänst</th><th>Pris</th></tr>
+          <tr>
+            <th>Tjänst</th>
+            <th>Pris</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Onlinelektion (60 min)</td><td>85 kr</td></tr>
-          <tr><td>Fysisk lektion (60 min)</td><td>105 kr</td></tr>
-          <tr><td>10-lektionerspaket</td><td>750 kr</td></tr>
+          <tr>
+            <td>60 min onlinehjälp</td>
+            <td>85 kr</td>
+          </tr>
+          <tr>
+            <td>60 min fysisk hjälp</td>
+            <td>105 kr</td>
+          </tr>
+          <tr>
+            <td>10 pass-erbjudande</td>
+            <td>750 kr</td>
+          </tr>
         </tbody>
       </table>
     </section>
 
-    <section id="kontakt" tabindex="-1" data-aos="fade-up">
+    <section id="contact" class="section hidden">
       <h2>Kontakta oss</h2>
       <form
         action="https://formspree.io/f/mnnvrnqa"
         method="POST"
         aria-label="Kontaktformulär"
       >
-        <label for="email">Din email:</label>
-        <input type="email" id="email" name="email" required />
+        <label for="email">Din e-post:</label>
+        <input id="email" type="email" name="email" required />
 
         <label for="message">Ditt meddelande:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" required></textarea>
 
         <button type="submit">Skicka</button>
       </form>
     </section>
-
-    <a href="#kontakt" class="floating-button" aria-label="Boka nu">Boka nu</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mattehjälp.nu – All rights reserved.</p>
+    &copy; 2025 Mattehjälp
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
 
