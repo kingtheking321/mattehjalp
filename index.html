@@ -3,24 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Mattehjälp</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Behöver du mattehjälp? Vi erbjuder prisvärd och personlig undervisning i matematik – online eller i Kristinehamn." />
+  <link rel="canonical" href="https://www.mattehjalp.nu/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mattehjälp – Online & i Kristinehamn" />
+  <meta property="og:description" content="Få hjälp med matte av riktiga lärare. Boka en gratis konsultation." />
+  <meta property="og:url" content="https://www.mattehjalp.nu/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.mattehjalp.nu/images/social.jpg" />
 
   <!-- Favicons och ikoner -->
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Tema för mobila webbläsare -->
-  <meta name="theme-color" content="#1a1a1a">
-  <meta name="apple-mobile-web-app-title" content="Mattehjälp">
-  <meta name="application-name" content="Mattehjälp">
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta name="apple-mobile-web-app-title" content="Mattehjälp" />
+  <meta name="application-name" content="Mattehjälp" />
+
+  <!-- Preconnect för bättre prestanda -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Structured data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Mattehjälp",
+    "url": "https://www.mattehjalp.nu",
+    "description": "Personlig mattehjälp för elever i alla nivåer, online eller i Kristinehamn.",
+    "sameAs": [
+      "https://www.facebook.com/mattehjalp",
+      "https://www.instagram.com/mattehjalp"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Redirect från mattehjalp.nu till www.mattehjalp.nu -->
+  <script>
+    if (location.hostname === "mattehjalp.nu") {
+      location.href = "https://www.mattehjalp.nu" + location.pathname + location.search + location.hash;
+    }
+  </script>
+
   <header>
     <button id="toggleDark" aria-label="Växla mörkt läge">🌙</button>
   </header>
