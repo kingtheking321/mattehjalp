@@ -2,5 +2,5 @@ User-agent: *
 Disallow: /private/
 Allow: /
 
-Sitemap: https://www.mattehjalp.nu/sitemap.xml
+Sitemap: https://www.mattehjalp.nu/Sitemap.xml
 
