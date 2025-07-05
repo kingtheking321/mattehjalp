@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://mattehjalp.nu/:path*",
+      "destination": "https://www.mattehjalp.nu/:path*",
+      "permanent": true
+    }
+  ]
+}
